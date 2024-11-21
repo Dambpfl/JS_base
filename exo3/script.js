@@ -6,4 +6,8 @@ for (let i = 1; i <= 4; i++) {
     carre.classList.add("carre")
     carre.textContent = i;
     board.appendChild(carre)
+
+    carre.addEventListener("click", function(){
+        this.classList.toggle('clicked');
+    })
 }

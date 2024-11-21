@@ -1,5 +1,7 @@
 #board {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    gap: 10px;
     flex-wrap: wrap;
 }
 
@@ -7,5 +9,15 @@
     width: 200px;
     height: 200px;
     background-color: green;
-    margin: 5px;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: 1s;
+}
+
+.carre.clicked {
+    background-color: red;
+    transform: rotate(360deg) scale(0.9);
 }
