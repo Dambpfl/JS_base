@@ -4,7 +4,7 @@ const twitter = document.querySelector(".twitter");
 const instagram = document.querySelector(".instagram");
 
 function Changement(color) {
-    document.body.style.background = color;  // CHANGEMENT DE LA COULEUR DE MON BODY
+    document.body.style.background = color;  //  COULEUR DE BODY !
 }
 
 facebook.addEventListener("click", function() {
