@@ -40,10 +40,6 @@ body h1{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.facebook .clicked{
-    border-radius: 50%;
-}
-
 .twitter{
     background-color: rgb(29, 155, 240);
     height: 100px;
