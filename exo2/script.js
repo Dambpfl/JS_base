@@ -1,16 +1,16 @@
-const board = document.querySelector("#board") // SELECTION DE L'ID 'BOARD'
+const board2 = document.querySelector("#board2") // SELECTION DE L'ID 'BOARD'
 
 
 // CREE MON CARRE PRINCIPAL
 const carrePrincipal = document.createElement("div") // CREE UNE DIV "CARREPRINCIPAL"
 carrePrincipal.classList.add("carrePrincipal") // AJOUT DE LA CLASS CARREPRINCIPAL
-board.appendChild(carrePrincipal) // AJOUTE L'ENFANT A BOARD
+board2.appendChild(carrePrincipal) // AJOUTE L'ENFANT A BOARD
 
 const backgroundColor = window.getComputedStyle(carrePrincipal).backgroundColor;  // PERMET DE CHERCHER L'INFO DU BACKGROUNDCOLOR
 carrePrincipal.innerText = `${backgroundColor}`   // ECRIS L'INFORMATION
 
 
-const colors = ["blue", "red", "green", "yellow"] // COULEUR DES CLONES "CARRE PRINCIPAL"  [0, 1, 2, 3]
+const colors = ["blue", "red", "green", "purple"] // COULEUR DES CLONES "CARRE PRINCIPAL"  [0, 1, 2, 3]
 
 // CREER LES 4 CARRES
 for(let i = 0; i <= 3; i++){
@@ -20,6 +20,8 @@ for(let i = 0; i <= 3; i++){
     board.appendChild(newCarre) // AJOUTE L'ENFANT A BOARD
 
 }
+
+
 
 // CHANGEMENT DE COULEUR AU CLIQUE
 const carres = document.querySelectorAll(".carrePrincipal");  // SELECTION DE TOUT LE CONTENU DE .CARREPRINCIPAL

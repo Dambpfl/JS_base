@@ -1,0 +1,11 @@
+#board {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.carre{
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    margin: 5px;
+}
