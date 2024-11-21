@@ -8,6 +8,6 @@ for (let i = 1; i <= 4; i++) {
     board.appendChild(carre)
 
     carre.addEventListener("click", function(){
-        this.classList.toggle('clicked');
+        this.classList.toggle('clicked'); // NOM DE L'INTERRUPTEUR
     })
 }
