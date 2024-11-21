@@ -3,7 +3,7 @@ const facebook = document.querySelector(".facebook");
 const twitter = document.querySelector(".twitter");
 const instagram = document.querySelector(".instagram");
 
-function Changement(color, nom) {
+function Changement(color) {
     document.body.style.background = color;  // CHANGEMENT DE LA COULEUR DE MON BODY
 }
 
