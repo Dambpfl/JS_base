@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="board"></div>
+    <script>
+        const carre = document.createElement("div")
+        carre.classList.add("carre")
+
+        const board = document.querySelector("#board")
+        board.appendChild(carre)
+
+        carre.innerText = "Texte"
+
+        carre.addEventListener("click", function(){
+        const className = carre.className;
+        const colorText = window.getComputedStyle(carre).color;
+        const backgroundColor = window.getComputedStyle(carre).backgroundColor;
+        const height = carre.offsetHeight;
+        const width = carre.offsetWidth;
+        const display = window.getComputedStyle(carre).display;
+        const fontFamily = window.getComputedStyle(carre).fontFamily;
+        const fonSize = window.getComputedStyle(carre).fontSize;
+        
+        alert(`
+        Class: ${className}
+        Background color: ${backgroundColor}
+        Color : ${colorText}
+        Height : ${height}
+        Width : ${width}
+        Display : ${display}
+        Display : ${fontFamily} (${fonSize})`
+        );
+    })
+    </script>
+</body>
+</html>
