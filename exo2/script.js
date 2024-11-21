@@ -4,7 +4,7 @@ const board2 = document.querySelector("#board2") // SELECTION DE L'ID 'BOARD'
 // CREE MON CARRE PRINCIPAL
 const carrePrincipal = document.createElement("div") // CREE UNE DIV "CARREPRINCIPAL"
 carrePrincipal.classList.add("carrePrincipal") // AJOUT DE LA CLASS CARREPRINCIPAL
-board2.appendChild(carrePrincipal) // AJOUTE L'ENFANT A BOARD
+board2.appendChild(carrePrincipal) // AJOUTE L'ENFANT A BOARD2
 
 const backgroundColor = window.getComputedStyle(carrePrincipal).backgroundColor;  // PERMET DE CHERCHER L'INFO DU BACKGROUNDCOLOR
 carrePrincipal.innerText = `${backgroundColor}`   // ECRIS L'INFORMATION
