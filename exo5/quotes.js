@@ -1,4 +1,4 @@
-let quotes = [
+export let quotes = [
     {
         "id": 1,
         "author": "Rocky Balboa",
@@ -89,4 +89,4 @@ let quotes = [
         "title": "Léon",
         "content": "La vie c’est comme ça tout le temps ? Ou c’est seulement quand on est petit ?"
     },
-]
+];

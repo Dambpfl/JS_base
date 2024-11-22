@@ -1,1 +1,3 @@
-import {quotes} from "./quotes.js";
+import { quotes } from "./quotes.js";
+
+console.log(quotes)
