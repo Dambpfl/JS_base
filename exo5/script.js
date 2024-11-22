@@ -28,5 +28,5 @@ quotes.forEach(function(i) {
     rectangle.appendChild(author);
     rectangle.appendChild(content);
 
-    board.appendChild(rectangle); // RECTANGLE DANS BOARD
+    board.appendChild(rectangle); // DIV RECTANGLE DANS BOARD
 })
