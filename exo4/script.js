@@ -3,18 +3,25 @@ const facebook = document.querySelector(".facebook");
 const twitter = document.querySelector(".twitter");
 const instagram = document.querySelector(".instagram");
 
-const BodyColorInitial = window.getComputedStyle(document.body).backgroundColor; // RECUPERE CODE COULEUR BODY
+const bodyColorInitial = window.getComputedStyle(document.body).backgroundColor; // RECUPERE CODE COULEUR BODY
+const borderRadiusInitial = "0%";
+const boxShadowInitial = "none";
+
 
 function Changements(element, color, name) { // CLASS(qui contient mes elements) + COULEUR + SPAN
     const couleurActuel = document.body.style.backgroundColor;
     const socialNames = element.querySelector(".social-name");      
 
     if(couleurActuel === color) {       // Si la couleur actuel est  strictement egale à la couleur (icone)
-        document.body.style.backgroundColor = BodyColorInitial; // alors couleur body
-        socialNames.textContent = "";
+        document.body.style.backgroundColor = bodyColorInitial; // alors couleur body
+        socialNames.textContent = ""; // zone de texte vide
+        element.style.borderRadius = borderRadiusInitial; // border radius = 0%
+        element.style.boxShadow = boxShadowInitial;
     } else {
         document.body.style.backgroundColor = color; // sinon couleur icone
-        socialNames.textContent = name;
+        socialNames.textContent = name; // nom du reseau social
+        element.style.borderRadius = "20%"; // border radius = 20%
+        element.style.boxShadow = "rgba(0, 0, 0, 0.35) 0px 5px 15px";
     }
 }
 
