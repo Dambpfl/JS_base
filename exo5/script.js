@@ -24,9 +24,19 @@ quotes.forEach(function(i) {
     content.classList.add("content");
     content.textContent = i.content;
 
-    rectangle.appendChild(title); // ALL DANS RECTANGLE
-    rectangle.appendChild(author);
-    rectangle.appendChild(content);
+    const favori = document.createElement("div"); // CREE DIV FAVORI
+    favori.classList.add("favori");
+
+    const coeurIcon = document.createElement("coeur"); // ICONE COEUR
+    coeurIcon.classList.add("fa-regular", "fa-heart"); // CLASS DE FONTAWESOME
 
     board.appendChild(rectangle); // DIV RECTANGLE DANS BOARD
+    
+    rectangle.appendChild(title); // ALL DANS RECTANGLE
+    rectangle.appendChild(content);
+    rectangle.appendChild(author);
+    rectangle.appendChild(favori);
+    
+    favori.appendChild(coeurIcon) // coeurIcon DANS FAVORI
+    
 })
