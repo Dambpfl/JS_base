@@ -28,7 +28,7 @@ quotes.forEach(function(i) {
     favori.classList.add("favori");
 
     const coeurIcon = document.createElement("coeur"); // ICONE COEUR
-    coeurIcon.classList.add("fa-regular", "fa-heart"); // CLASS DE FONTAWESOME
+    coeurIcon.classList.add("fa-regular", "fa-heart"); // CLASS DE FONTAWESOME VIDE + COEUR
 
     board.appendChild(rectangle); // DIV RECTANGLE DANS BOARD
     
@@ -38,5 +38,10 @@ quotes.forEach(function(i) {
     rectangle.appendChild(favori);
     
     favori.appendChild(coeurIcon) // coeurIcon DANS FAVORI
+
+    coeurIcon.addEventListener("click", function() {
+        coeurIcon.classList.toggle("fa-solid"); // CLASS FONTAWESOME  PLEIN
+        coeurIcon.classList.toggle("fa-regular"); // CLASS FONTAWESOME  VIDE
+    })
     
 })

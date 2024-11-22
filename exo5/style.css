@@ -47,5 +47,8 @@ body {
     bottom: -5px;
     font-style: normal;
     font-size: 10px;
-    
+}
+
+.favori .fa-solid{
+    color: red;
 }
