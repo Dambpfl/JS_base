@@ -3,16 +3,17 @@ const facebook = document.querySelector(".facebook");
 const twitter = document.querySelector(".twitter");
 const instagram = document.querySelector(".instagram");
 
-const BodyColorInitial = window.getComputedStyle(document.body).backgroundColor;
+const BodyColorInitial = window.getComputedStyle(document.body).backgroundColor; // RECUPERE CODE COULEUR BODY
 
 function Changements(element, color, name) { // CLASS(qui contient mes elements) + COULEUR + SPAN
-    const couleurBase = document.body.style.backgroundColor;      // couleur de base = body
+    const couleurActuel = document.body.style.backgroundColor;      
 
-    if(couleurBase === color) {       // Si la couleur de base est  strictement egale à la couleur (icone)
+    if(couleurActuel === color) {       // Si la couleur actuel est  strictement egale à la couleur (icone)
         document.body.style.backgroundColor = BodyColorInitial; // alors couleur body
     } else {
         document.body.style.backgroundColor = color; // sinon couleur icone
     }
+
 
     const socialNames = element.querySelector(".social-name");
     socialNames.textContent = name; // MAJ TEXTE 
