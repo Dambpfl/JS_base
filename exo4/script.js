@@ -10,22 +10,22 @@ const boxShadowInitial = "none";
 
 function Changements(element, color, name) { // CLASS(qui contient mes elements) + COULEUR + SPAN
     const couleurActuel = document.body.style.backgroundColor;
-    const socialNames = element.querySelector(".social-name");      
-
+    const socialNames = element.querySelector(".social-name"); 
+    
     if(couleurActuel === color) {       // Si la couleur actuel est  strictement egale à la couleur (icone)
         document.body.style.backgroundColor = bodyColorInitial; // alors couleur body
         socialNames.textContent = ""; // zone de texte vide
         element.style.borderRadius = borderRadiusInitial; // border radius = 0%
-        element.style.boxShadow = boxShadowInitial;
+        element.style.boxShadow = boxShadowInitial; // pas de box-shadow
     } else {
         document.body.style.backgroundColor = color; // sinon couleur icone
         socialNames.textContent = name; // nom du reseau social
         element.style.borderRadius = "20%"; // border radius = 20%
-        element.style.boxShadow = "rgba(0, 0, 0, 0.35) 0px 5px 15px";
+        element.style.boxShadow = "rgba(0, 0, 0, 0.35) 0px 5px 15px"; // box-shadow
     }
 }
 
-
+// DEFINIS L'ELEMENT(CLASS/ID) + LA COULEUR + LE NOM DU RESEAU SOCIAL
 facebook.addEventListener("click", function() {
     Changements(facebook, "rgb(1, 101, 225)", "Facebook");
 });
