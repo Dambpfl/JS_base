@@ -6,17 +6,16 @@ const instagram = document.querySelector(".instagram");
 const BodyColorInitial = window.getComputedStyle(document.body).backgroundColor; // RECUPERE CODE COULEUR BODY
 
 function Changements(element, color, name) { // CLASS(qui contient mes elements) + COULEUR + SPAN
-    const couleurActuel = document.body.style.backgroundColor;      
+    const couleurActuel = document.body.style.backgroundColor;
+    const socialNames = element.querySelector(".social-name");      
 
     if(couleurActuel === color) {       // Si la couleur actuel est  strictement egale à la couleur (icone)
         document.body.style.backgroundColor = BodyColorInitial; // alors couleur body
+        socialNames.textContent = "";
     } else {
         document.body.style.backgroundColor = color; // sinon couleur icone
+        socialNames.textContent = name;
     }
-
-
-    const socialNames = element.querySelector(".social-name");
-    socialNames.textContent = name; // MAJ TEXTE 
 }
 
 
