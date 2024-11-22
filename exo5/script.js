@@ -13,15 +13,15 @@ quotes.forEach(function(i) {
     rectangle.classList.add("rectangle")
 
     const title = document.createElement("p") // TITRE
-    title.classList.add("quote-title");
+    title.classList.add("title");
     title.textContent = i.title;
 
     const author = document.createElement("p") // AUTEUR
-    author.classList.add("quote-author");
+    author.classList.add("author");
     author.textContent = i.author;
 
     const content = document.createElement("p") // CONTENU
-    content.classList.add("quote-content");
+    content.classList.add("content");
     content.textContent = i.content;
 
     rectangle.appendChild(title); // ALL DANS RECTANGLE
