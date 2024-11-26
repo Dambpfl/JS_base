@@ -1,15 +1,39 @@
 import { quotes } from "./quotes.js"; // Importe la variable quotes du fichier
 
-
-console.log(quotes)
-
-console.log(quotes[1].content)
-
 const board = document.getElementById("board");
 
-quotes.forEach(function(i) {
-    console.log(i);
-    const rectangle = document.createElement("div"); // CREE DIV RECTANGLE
+
+// FONCTION AFFICHER TOUTE LES CITATIONS
+function afficheQuotes() {
+    quotes.forEach((quote) => {
+        const rectangle = document.createElement("div");
+        rectangle.className = 'rectangle';
+
+        const quoteElement = document.createElement("div");
+        quoteElement.innerHTML =
+                 `<p class="title">${quote.title} </p>
+                    <p class="content">"${quote.content}" </p>,
+                        <p class="author"> ${quote.author} </p>`;
+
+        
+        const favori = document.createElement("div");
+        favori.className = 'favori';
+        
+        const icon = document.createElement("i");
+        icon.className = 'fa-regular fa-heart';
+        
+        board.appendChild(rectangle);
+        rectangle.appendChild(quoteElement);
+        rectangle.appendChild(favori);
+        favori.appendChild(icon);
+    });
+}
+
+afficheQuotes();
+
+
+    
+    /*const rectangle = document.createElement("div"); // CREE DIV RECTANGLE
     rectangle.classList.add("rectangle")
 
     const title = document.createElement("p") // TITRE
@@ -46,4 +70,4 @@ quotes.forEach(function(i) {
     
 })
 
-localStorage.coeurIcon("fa-solid"); // NE MARCHE PAS A VOIR
+localStorage.coeurIcon("fa-solid"); // NE MARCHE PAS A VOIR*/

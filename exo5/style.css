@@ -1,6 +1,11 @@
 body {
-    background-color: rgb(6, 0, 88);
+    background-color: rgb(255, 255, 255);
 }
+
+#board p{
+    color : rgb(255, 255, 255);
+}
+
 
 .rectangle {
     height: 100px;
@@ -19,11 +24,6 @@ body {
     right: 10px;
 }
 
-.title,
-.author,
-.content {
-    color: white;
-}
 
 .title{
     display: flex;
