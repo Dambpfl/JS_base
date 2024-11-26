@@ -45,3 +45,5 @@ quotes.forEach(function(i) {
     })
     
 })
+
+localStorage.coeurIcon("fa-solid"); // NE MARCHE PAS A VOIR
