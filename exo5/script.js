@@ -21,7 +21,17 @@ function afficheQuotes() {
         
         const icon = document.createElement("i");
         icon.className = 'fa-regular fa-heart';
-        
+
+        icon.style.cursor = "pointer";
+
+        icon.addEventListener("click", () => toggleFavorite(quote.id, icon));
+
+        //verifier si un coeur est rouge (un ID est dans le tableau)
+        const tableauFavori = getFavorites();
+        if (tableauFavori.includes(quote.id)) {
+            icon.classList.replace("fa-regular", "fa-solid");
+        }
+
         board.appendChild(rectangle);
         rectangle.appendChild(quoteElement);
         rectangle.appendChild(favori);
@@ -31,43 +41,26 @@ function afficheQuotes() {
 
 afficheQuotes();
 
+// Recupere le tableau de favori
+function getFavorites() {
+    const tableauFavori = localStorage.getItem("favorites"); // Recupere l'info localstorage (getItem)
+    return tableauFavori ? JSON.parse(tableauFavori) : []; // transforme l'info en tableau
+}
 
-    
-    /*const rectangle = document.createElement("div"); // CREE DIV RECTANGLE
-    rectangle.classList.add("rectangle")
+//ajouter enlever le coeur rouge
+function toggleFavorite(id, icon) {
+    const tableauFavori = getFavorites();
+    if (tableauFavori.includes(id)){
+        icon.classList.replace("fa-solid", "fa-regular");
+        const index = tableauFavori.indexOf(id);
+        console.log("click if");
+        tableauFavori.splice(index, 1);
+    } else {
+        tableauFavori.push(id);
+        icon.classList.replace("fa-regular", "fa-solid");
+        console.log("click else");
+    }
+    // Mise en memoire du tableau de favori
+    localStorage.setItem("favorites", JSON.stringify(tableauFavori)); 
+}
 
-    const title = document.createElement("p") // TITRE
-    title.classList.add("title");
-    title.textContent = i.title;
-
-    const author = document.createElement("p") // AUTEUR
-    author.classList.add("author");
-    author.textContent = i.author;
-
-    const content = document.createElement("p") // CONTENU
-    content.classList.add("content");
-    content.textContent = i.content;
-
-    const favori = document.createElement("div"); // CREE DIV FAVORI
-    favori.classList.add("favori");
-
-    const coeurIcon = document.createElement("coeur"); // ICONE COEUR
-    coeurIcon.classList.add("fa-regular", "fa-heart"); // CLASS DE FONTAWESOME VIDE + COEUR
-
-    board.appendChild(rectangle); // DIV RECTANGLE DANS BOARD
-    
-    rectangle.appendChild(title); // ALL DANS RECTANGLE
-    rectangle.appendChild(content);
-    rectangle.appendChild(author);
-    rectangle.appendChild(favori);
-    
-    favori.appendChild(coeurIcon) // coeurIcon DANS FAVORI
-
-    coeurIcon.addEventListener("click", function() {
-        coeurIcon.classList.toggle("fa-solid"); // CLASS FONTAWESOME  PLEIN
-        coeurIcon.classList.toggle("fa-regular"); // CLASS FONTAWESOME  VIDE
-    })
-    
-})
-
-localStorage.coeurIcon("fa-solid"); // NE MARCHE PAS A VOIR*/
